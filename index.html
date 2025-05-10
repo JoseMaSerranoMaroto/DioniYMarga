@@ -3,28 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imagen Puenting</title>
+  <title>Imagen Puenting con Texto</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     html, body {
       height: 100%;
       width: 100%;
+      font-family: Arial, sans-serif;
     }
+
     .fullscreen-image {
       height: 100vh;
       width: 100vw;
-      background-image: url('puenting.png');
+      background-image: url('puenting.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .text-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 800px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .text-overlay {
+        font-size: 1rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="fullscreen-image"></div>
+  <div class="fullscreen-image">
+    <div class="text-overlay">
+      Ya sabemos Marga que te hacía mucha ilusión saltar desde un puente, pero Dioni está ya muy mayor para estas cosas. Así que hemos pensado otra experiencia más acorde.
+    </div>
+  </div>
 </body>
 </html>
